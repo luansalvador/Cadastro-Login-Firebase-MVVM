@@ -13,6 +13,7 @@ class RegisterView: UIView {
         //Delegate is register by ViewController for func setupTableViewDelegate
         let view = UITableView(frame: .zero, style: .plain)
         view.register(RegisterCell.self, forCellReuseIdentifier: RegisterCell.identifier)
+        view.separatorColor = UIColor.et_headerColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -38,7 +39,6 @@ class RegisterView: UIView {
             self.tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-
         ])
     }
     
