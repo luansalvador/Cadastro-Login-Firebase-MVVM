@@ -17,6 +17,7 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         self.onboardingViewModel.delegate = self
         self.setupView()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +63,7 @@ extension OnboardingViewController: OnboardingViewModelDelegate {
 
 extension OnboardingViewController: UITextFieldDelegate {
     
+    // MARK: Jump to next Text Field when touch on "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == onboardingView.getTfEmail() {
@@ -71,5 +73,19 @@ extension OnboardingViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+}
+
+extension OnboardingViewController {
+    
+    // MARK: Setting close keyboard when touching out of text field
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
