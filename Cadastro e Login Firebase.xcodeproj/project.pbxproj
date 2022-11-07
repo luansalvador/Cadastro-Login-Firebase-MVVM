@@ -26,6 +26,7 @@
 		0FFC9D0E2918961900DC4F2C /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D0D2918961900DC4F2C /* UIView+.swift */; };
 		0FFC9D11291896BD00DC4F2C /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D10291896BD00DC4F2C /* DefaultButton.swift */; };
 		0FFC9D13291896FE00DC4F2C /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D12291896FE00DC4F2C /* DefaultTextField.swift */; };
+		0FFC9D152919C5BC00DC4F2C /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D142919C5BC00DC4F2C /* DefaultLabel.swift */; };
 		F0338A854EA347A0BCCE687C /* Pods_Cadastro_e_Login_Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212F94F342555297E8835144 /* Pods_Cadastro_e_Login_Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		0FFC9D0D2918961900DC4F2C /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0FFC9D10291896BD00DC4F2C /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		0FFC9D12291896FE00DC4F2C /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
+		0FFC9D142919C5BC00DC4F2C /* DefaultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
 		212F94F342555297E8835144 /* Pods_Cadastro_e_Login_Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cadastro_e_Login_Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E18A189629253B6AD2B086 /* Pods-Cadastro e Login Firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cadastro e Login Firebase.debug.xcconfig"; path = "Target Support Files/Pods-Cadastro e Login Firebase/Pods-Cadastro e Login Firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		EA3302F360BDCA43A05F1F23 /* Pods-Cadastro e Login Firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cadastro e Login Firebase.release.xcconfig"; path = "Target Support Files/Pods-Cadastro e Login Firebase/Pods-Cadastro e Login Firebase.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				0FFC9D10291896BD00DC4F2C /* DefaultButton.swift */,
 				0FFC9D12291896FE00DC4F2C /* DefaultTextField.swift */,
+				0FFC9D142919C5BC00DC4F2C /* DefaultLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				09C2B43028FBC5D4008DE871 /* OnboardingViewModel.swift in Sources */,
 				09C2B43B28FBC614008DE871 /* RegisterUser.swift in Sources */,
 				0FFC9D0A2918956500DC4F2C /* UIColor+.swift in Sources */,
+				0FFC9D152919C5BC00DC4F2C /* DefaultLabel.swift in Sources */,
 				09C2B43E28FBC614008DE871 /* RegisterViewModel.swift in Sources */,
 				09C2B41628FBC53D008DE871 /* AppDelegate.swift in Sources */,
 				0FFC9D11291896BD00DC4F2C /* DefaultButton.swift in Sources */,

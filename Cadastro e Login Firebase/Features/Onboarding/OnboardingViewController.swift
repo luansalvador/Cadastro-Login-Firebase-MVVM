@@ -28,6 +28,7 @@ class OnboardingViewController: UIViewController {
         self.view = onboardingView
         self.onboardingView.actionRegister = self.clickedRegister
         self.onboardingView.loginAction = self.clickedLogin
+        self.onboardingView.setupDelegate(delegate: self)
     }
     
     private func clickedRegister() {
@@ -35,7 +36,7 @@ class OnboardingViewController: UIViewController {
     }
     
     private func clickedLogin() {
-        self.onboardingViewModel.setLogin(email: self.onboardingView.getTfEmail(), password: self.onboardingView.getTfPassword())
+        self.onboardingViewModel.setLogin(email: self.onboardingView.getTfEmail().text ?? "", password: self.onboardingView.getTfPassword().text ?? "")
         self.onboardingViewModel.loginSuccess()
     }
     
@@ -56,5 +57,19 @@ extension OnboardingViewController: OnboardingViewModelDelegate {
     
     func loginOnSucessPush() {
         self.alert(title: onboardingViewModel.title, message: onboardingViewModel.message)
+    }
+}
+
+extension OnboardingViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == onboardingView.getTfEmail() {
+            textField.resignFirstResponder()
+            onboardingView.getTfPassword().becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

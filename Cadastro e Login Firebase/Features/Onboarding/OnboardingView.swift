@@ -12,33 +12,32 @@ class OnboardingView: UIView {
     var actionRegister: (() -> Void)?
     var loginAction: (() -> Void)?
     
-    private lazy var lbTopText: UILabel = {
-        let view = UILabel()
-        view.text = "Entre no App ou crie uma conta"
+    private lazy var lbTopText: DefaultLabel = {
+        let view = DefaultLabel(text: "Entre no App ou crie uma conta")
         view.textColor = UIColor.et_headerColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private lazy var lbAskEmailAndPassword: UILabel = {
-        let view = UILabel()
-        view.text = "Informe seu e-mail de cadastro e senha"
+    private lazy var lbAskEmailAndPassword: DefaultLabel = {
+        let view = DefaultLabel(text: "Informe seu e-mail de cadastro e senha")
         view.font = UIFont.boldSystemFont(ofSize: 32)
         view.numberOfLines = 0
         view.textColor = UIColor.gray
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private lazy var tfEmail: DefaultTextField = {
         let view = DefaultTextField(placeHolder: "E-mail:")
         view.keyboardType = .emailAddress
+        view.tag = 0
         view.addBottomBorder()
         return view
     }()
     
     private lazy var tfPassword: DefaultTextField = {
         let view = DefaultTextField(placeHolder: "Senha")
+        view.tag = 1
         view.isSecureTextEntry = true
         return view
     }()
@@ -93,7 +92,7 @@ class OnboardingView: UIView {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            self.lbTopText.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 50),
+            self.lbTopText.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
             self.lbTopText.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             self.lbTopText.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
@@ -111,7 +110,7 @@ class OnboardingView: UIView {
             self.tfPassword.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             self.tfPassword.heightAnchor.constraint(equalToConstant: 44),
             
-            self.btForgotPassword.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            self.btForgotPassword.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16),
             self.btForgotPassword.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.btForgotPassword.widthAnchor.constraint(equalToConstant: 180),
         
@@ -139,12 +138,17 @@ class OnboardingView: UIView {
         self.loginAction?()
     }
     
-    public func getTfEmail() -> String {
-        return self.tfEmail.text ?? ""
+    public func getTfEmail() -> UITextField {
+        return self.tfEmail
     }
     
-    public func getTfPassword() -> String {
-        return self.tfPassword.text ?? ""
+    public func getTfPassword() -> UITextField {
+        return self.tfPassword
+    }
+    
+    public func setupDelegate(delegate: UITextFieldDelegate?) {
+        self.tfEmail.delegate = delegate
+        self.tfPassword.delegate = delegate
     }
 }
 
