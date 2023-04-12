@@ -54,4 +54,8 @@ class RegisterView: UIView {
         self.tableView.delegate = parent
         self.tableView.dataSource = parent
     }
+    
+    public func getTableView() -> UITableView {
+        return self.tableView
+    }
 }

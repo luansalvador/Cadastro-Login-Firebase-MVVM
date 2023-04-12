@@ -82,10 +82,7 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension RegisterViewController: RegisterViewModelDelegate {
     func registerOnSuccessPush() {
-        
         alert(title: registerViewModel.title, message: registerViewModel.message)
-        
-        //navigationController?.popViewController(animated: true)
     }
     
     func registerBack() {
@@ -105,6 +102,11 @@ extension RegisterViewController: UITextFieldDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         textField.isFirstResponder
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        registerViewModel.jumpToNextTextField(textField: textField, tableView: self.registerView.getTableView())
+        return true
     }
 }
 

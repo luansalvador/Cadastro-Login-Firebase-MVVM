@@ -10,8 +10,8 @@ import FirebaseAuth
 
 class OnboardingViewController: UIViewController {
     
-    let onboardingView = OnboardingView()
-    let onboardingViewModel = OnboardingViewModel()
+    private let onboardingView = OnboardingView()
+    private let onboardingViewModel = OnboardingViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,37 @@ class OnboardingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.navigationController?.isNavigationBarHidden = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    // MARK: Setting buttons above keyboard when keyboard show up
+    @objc func keyboardWillChange(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        
+        let keyboardHeight = view.frame.height - keyboardFrame.origin.y
+        
+        self.onboardingView.buttonBottomConstraint?.isActive = false
+        self.onboardingView.buttonBottomConstraint = self.onboardingView.getBtForgetPassword().bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -(keyboardHeight + 16))
+        self.onboardingView.buttonBottomConstraint?.isActive = true
+    }
+    
+    // MARK: Setting buttons on original location
+    @objc func keyboardDidDisappear(notification: NSNotification) {
+        self.onboardingView.buttonBottomConstraint?.isActive = false
+        self.onboardingView.getConstraints()
     }
     
     private func setupView() {

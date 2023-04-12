@@ -101,4 +101,17 @@ class RegisterViewModel {
     public func doBack() {
         self.delegate?.registerBack()
     }
+    
+    public func getIndexPath(for textField: UITextField, tableView: UITableView) -> IndexPath? {
+        let point = textField.convert(textField.bounds.origin, to: tableView)
+        return tableView.indexPathForRow(at: point)
+    }
+    
+    public func jumpToNextTextField(textField: UITextField, tableView: UITableView) {
+        if let indexPath = self.getIndexPath(for: textField, tableView: tableView), let nextCell = tableView.cellForRow(at: IndexPath(row: indexPath.row + 1, section: indexPath.section)) as? RegisterCell {
+            nextCell.getTf().becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+    }
 }

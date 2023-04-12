@@ -11,6 +11,7 @@ class OnboardingView: UIView {
     
     var actionRegister: (() -> Void)?
     var loginAction: (() -> Void)?
+    public var buttonBottomConstraint: NSLayoutConstraint?
     
     private lazy var lbTopText: DefaultLabel = {
         let view = DefaultLabel(text: "Entre no App ou crie uma conta")
@@ -90,9 +91,12 @@ class OnboardingView: UIView {
     }
     
     private func setupConstraints() {
+        
+        self.buttonBottomConstraint = self.btForgotPassword.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16)
+        
         NSLayoutConstraint.activate([
             
-            self.lbTopText.topAnchor.constraint(equalTo: self.topAnchor, constant: 50),
+            self.lbTopText.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 16),
             self.lbTopText.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             self.lbTopText.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             
@@ -110,7 +114,7 @@ class OnboardingView: UIView {
             self.tfPassword.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             self.tfPassword.heightAnchor.constraint(equalToConstant: 44),
             
-            self.btForgotPassword.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16),
+            self.buttonBottomConstraint!,
             self.btForgotPassword.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.btForgotPassword.widthAnchor.constraint(equalToConstant: 180),
         
@@ -149,6 +153,14 @@ class OnboardingView: UIView {
     public func setupDelegate(delegate: UITextFieldDelegate?) {
         self.tfEmail.delegate = delegate
         self.tfPassword.delegate = delegate
+    }
+    
+    public func getBtForgetPassword() -> UIButton {
+        return btForgotPassword
+    }
+    
+    public func getConstraints() -> Any {
+        return setupConstraints()
     }
 }
 
