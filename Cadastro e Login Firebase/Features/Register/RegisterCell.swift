@@ -57,6 +57,10 @@ class RegisterCell: UITableViewCell {
             
         ])
     }
+    
+    public func getTf() -> UITextField {
+        return self.textField
+    }
 }
 
 extension RegisterCell: ConfigurableCellProtocol {
