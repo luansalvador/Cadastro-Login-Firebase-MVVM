@@ -14,7 +14,6 @@
 		09C2B42E28FBC5D4008DE871 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B42B28FBC5D4008DE871 /* OnboardingViewController.swift */; };
 		09C2B42F28FBC5D4008DE871 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B42C28FBC5D4008DE871 /* OnboardingView.swift */; };
 		09C2B43028FBC5D4008DE871 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B42D28FBC5D4008DE871 /* OnboardingViewModel.swift */; };
-		09C2B43928FBC614008DE871 /* RegisterFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43228FBC614008DE871 /* RegisterFooterView.swift */; };
 		09C2B43B28FBC614008DE871 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43428FBC614008DE871 /* RegisterUser.swift */; };
 		09C2B43C28FBC614008DE871 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43528FBC614008DE871 /* RegisterView.swift */; };
 		09C2B43D28FBC614008DE871 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43628FBC614008DE871 /* RegisterViewController.swift */; };
@@ -40,7 +39,6 @@
 		09C2B42B28FBC5D4008DE871 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		09C2B42C28FBC5D4008DE871 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		09C2B42D28FBC5D4008DE871 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		09C2B43228FBC614008DE871 /* RegisterFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFooterView.swift; sourceTree = "<group>"; };
 		09C2B43428FBC614008DE871 /* RegisterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		09C2B43528FBC614008DE871 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		09C2B43628FBC614008DE871 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 		09C2B43128FBC614008DE871 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				09C2B43228FBC614008DE871 /* RegisterFooterView.swift */,
 				09C2B43428FBC614008DE871 /* RegisterUser.swift */,
 				09C2B43528FBC614008DE871 /* RegisterView.swift */,
 				09C2B43628FBC614008DE871 /* RegisterViewController.swift */,
@@ -311,7 +308,6 @@
 				0FFC9D11291896BD00DC4F2C /* DefaultButton.swift in Sources */,
 				09C2B42F28FBC5D4008DE871 /* OnboardingView.swift in Sources */,
 				09C2B42E28FBC5D4008DE871 /* OnboardingViewController.swift in Sources */,
-				09C2B43928FBC614008DE871 /* RegisterFooterView.swift in Sources */,
 				09C2B41828FBC53D008DE871 /* SceneDelegate.swift in Sources */,
 				0FFC9D13291896FE00DC4F2C /* DefaultTextField.swift in Sources */,
 			);

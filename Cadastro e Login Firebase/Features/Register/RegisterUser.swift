@@ -9,10 +9,8 @@ import Foundation
 
 struct RegisterUser {
     var name: String
-    var cpf: String
     var email: String
     var phone: String
-    var birthDate: String
     var password: String
     var confirmPassword: String
 }

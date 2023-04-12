@@ -10,7 +10,6 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     let registerView = RegisterView()
-    let registerFooterView = RegisterFooterView()
     let registerViewModel = RegisterViewModel()
     
     override func viewDidLoad() {
@@ -30,8 +29,8 @@ class RegisterViewController: UIViewController {
         self.view.backgroundColor = .white
         registerView.setupTableViewDelegate(parent: self)
         self.view = registerView
-        self.registerFooterView.backAction = self.clickedBack
-        self.registerFooterView.registerAction = self.clickedRegister
+        self.registerView.backAction = self.clickedBack
+        self.registerView.registerAction = self.clickedRegister
     }
     
     private func clickedRegister() {
@@ -69,14 +68,6 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return registerFooterView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return RegisterFooterView.height
     }
 }
 

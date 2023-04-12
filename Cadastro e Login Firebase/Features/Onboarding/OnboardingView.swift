@@ -92,7 +92,7 @@ class OnboardingView: UIView {
     
     private func setupConstraints() {
         
-        self.buttonBottomConstraint = self.btForgotPassword.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16)
+        self.buttonBottomConstraint = self.btForgotPassword.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16)
         
         NSLayoutConstraint.activate([
             
