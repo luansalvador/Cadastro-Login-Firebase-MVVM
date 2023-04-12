@@ -11,20 +11,16 @@ import FirebaseAuth
 
 enum TextFieldData: Int {
     case nameTextField = 0
-    case cpfTextField
     case emailTextField
     case phoneTextField
-    case birthDateTextField
     case passwordTextField
     case confirmPasswordTextField
 }
 
 enum PlaceHolderValues: String, CaseIterable {
     case name = "Nome Completo:"
-    case cpf = "CPF:"
     case email = "E-mail:"
     case phone = "Celular:"
-    case birthDate = "Data de Nascimento:"
     case password = "Senha:"
     case confirmPassword = "Confirmar Senha:"
 }
@@ -43,10 +39,8 @@ protocol RegisterViewModelDelegate: AnyObject {
 class RegisterViewModel {
     
     private var name: String?
-    private var cpf: String?
     private var email: String?
     private var phone: String?
-    private var birthDate: String?
     private var password: String?
     private var confirmPassword: String?
     
@@ -55,7 +49,7 @@ class RegisterViewModel {
     
     weak var delegate: RegisterViewModelDelegate?
     
-    static var registerUser: RegisterUser = RegisterUser(name: "luan salvador", cpf: "11111111111", email: "luan@gmail.com", phone: "11111111111", birthDate: "xx/xx/xxxx", password: "123456", confirmPassword: "123456")
+    static var registerUser: RegisterUser = RegisterUser(name: "luan salvador", email: "luan@gmail.com", phone: "11111111111", password: "123456", confirmPassword: "123456")
     
     public func newRegister(_ textField: UITextField) {
         
@@ -63,18 +57,12 @@ class RegisterViewModel {
             case TextFieldData.nameTextField.rawValue:
                 RegisterViewModel.registerUser.name = textField.text ?? ""
             
-            case TextFieldData.cpfTextField.rawValue:
-                RegisterViewModel.registerUser.cpf = textField.text ?? ""
-            
             case TextFieldData.emailTextField.rawValue:
                 RegisterViewModel.registerUser.email = textField.text ?? ""
             
             case TextFieldData.phoneTextField.rawValue:
                 RegisterViewModel.registerUser.phone = textField.text ?? ""
-            
-            case TextFieldData.birthDateTextField.rawValue:
-                RegisterViewModel.registerUser.birthDate = textField.text ?? ""
-            
+    
             case TextFieldData.passwordTextField.rawValue:
                 RegisterViewModel.registerUser.password = textField.text ?? ""
             
