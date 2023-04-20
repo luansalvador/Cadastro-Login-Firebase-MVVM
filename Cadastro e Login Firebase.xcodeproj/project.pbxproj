@@ -20,6 +20,9 @@
 		09C2B43E28FBC614008DE871 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43728FBC614008DE871 /* RegisterViewModel.swift */; };
 		09C2B43F28FBC614008DE871 /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43828FBC614008DE871 /* RegisterCell.swift */; };
 		09C2B44128FBC973008DE871 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09C2B44028FBC973008DE871 /* GoogleService-Info.plist */; };
+		0F3D824229F20201001A9B75 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D824129F20201001A9B75 /* MainPageViewController.swift */; };
+		0F3D824429F2024F001A9B75 /* MainPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D824329F2024F001A9B75 /* MainPageViewModel.swift */; };
+		0F3D824629F203DF001A9B75 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D824529F203DF001A9B75 /* MainPageView.swift */; };
 		0FFC9D0A2918956500DC4F2C /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D092918956500DC4F2C /* UIColor+.swift */; };
 		0FFC9D0C291895D200DC4F2C /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D0B291895D200DC4F2C /* UITextField+.swift */; };
 		0FFC9D0E2918961900DC4F2C /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D0D2918961900DC4F2C /* UIView+.swift */; };
@@ -45,6 +48,9 @@
 		09C2B43728FBC614008DE871 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		09C2B43828FBC614008DE871 /* RegisterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
 		09C2B44028FBC973008DE871 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F3D824129F20201001A9B75 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		0F3D824329F2024F001A9B75 /* MainPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewModel.swift; sourceTree = "<group>"; };
+		0F3D824529F203DF001A9B75 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		0FFC9D092918956500DC4F2C /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0FFC9D0B291895D200DC4F2C /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		0FFC9D0D2918961900DC4F2C /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -133,11 +139,22 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		0F3D824029F20192001A9B75 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				0F3D824129F20201001A9B75 /* MainPageViewController.swift */,
+				0F3D824329F2024F001A9B75 /* MainPageViewModel.swift */,
+				0F3D824529F203DF001A9B75 /* MainPageView.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
 		0FFC9D072918941300DC4F2C /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				09C2B43128FBC614008DE871 /* Register */,
+				0F3D824029F20192001A9B75 /* MainPage */,
 				09C2B42A28FBC5D4008DE871 /* Onboarding */,
+				09C2B43128FBC614008DE871 /* Register */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -300,6 +317,7 @@
 				09C2B43D28FBC614008DE871 /* RegisterViewController.swift in Sources */,
 				09C2B43F28FBC614008DE871 /* RegisterCell.swift in Sources */,
 				09C2B43028FBC5D4008DE871 /* OnboardingViewModel.swift in Sources */,
+				0F3D824429F2024F001A9B75 /* MainPageViewModel.swift in Sources */,
 				09C2B43B28FBC614008DE871 /* RegisterUser.swift in Sources */,
 				0FFC9D0A2918956500DC4F2C /* UIColor+.swift in Sources */,
 				0FFC9D152919C5BC00DC4F2C /* DefaultLabel.swift in Sources */,
@@ -309,6 +327,8 @@
 				09C2B42F28FBC5D4008DE871 /* OnboardingView.swift in Sources */,
 				09C2B42E28FBC5D4008DE871 /* OnboardingViewController.swift in Sources */,
 				09C2B41828FBC53D008DE871 /* SceneDelegate.swift in Sources */,
+				0F3D824629F203DF001A9B75 /* MainPageView.swift in Sources */,
+				0F3D824229F20201001A9B75 /* MainPageViewController.swift in Sources */,
 				0FFC9D13291896FE00DC4F2C /* DefaultTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,8 +32,6 @@ final class OnboardingViewModel {
         
         Auth.auth().signIn(withEmail: emailLogin, password: passwordLogin) { authData, error in
             if error == nil {
-                self.title = "Sucesso"
-                self.message = "Login feito com sucesso"
                 self.delegate?.loginOnSucessPush()
             } else {
                 print("Falha no login")
