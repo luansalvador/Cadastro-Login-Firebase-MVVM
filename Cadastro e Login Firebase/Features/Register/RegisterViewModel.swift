@@ -49,7 +49,7 @@ class RegisterViewModel {
     
     weak var delegate: RegisterViewModelDelegate?
     
-    static var registerUser: RegisterUser = RegisterUser(name: "luan salvador", email: "luan@gmail.com", phone: "11111111111", password: "123456", confirmPassword: "123456")
+    static var registerUser: UserModel = UserModel(name: "luan salvador", email: "luan@gmail.com", phone: "11111111111", password: "123456", confirmPassword: "123456")
     
     public func newRegister(_ textField: UITextField) {
         
@@ -75,12 +75,22 @@ class RegisterViewModel {
     }
     
     public func doRegister() {
-        Auth.auth().createUser(withEmail: RegisterViewModel.registerUser.email, password: RegisterViewModel.registerUser.password) { authResult, error in
-            if error == nil {
+        let userBusiness = UserBusiness()
+        let userManager = UserManager(business: userBusiness)
+        
+        //FAZER A VALIDAÇÃO DO REGISTRO E PASSAR AS INFORMAÇÕES VALIDADAS ABAIXO
+        userManager.register(name: RegisterViewModel.registerUser.name,
+                             email: RegisterViewModel.registerUser.email,
+                             phone: RegisterViewModel.registerUser.phone,
+                             password: RegisterViewModel.registerUser.password,
+                             confirmPassword: RegisterViewModel.registerUser.confirmPassword) { userModel in
+            switch userModel {
+                
+            case .success(_):
                 self.title = "Sucesso"
                 self.message = "Cadastro realizado"
                 self.delegate?.registerOnSuccessPush()
-            } else {
+            case .failure(_):
                 print("Falha ao cadastrar")
             }
         }
