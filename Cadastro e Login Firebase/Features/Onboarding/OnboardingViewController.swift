@@ -87,8 +87,8 @@ extension OnboardingViewController: OnboardingViewModelDelegate {
     }
     
     func loginOnSucessPush() {
-        let mainPageVC = MainPageViewController()
-        self.navigationController?.pushViewController(mainPageVC, animated: true)
+        let showBooksViewController = ShowBooksViewController()
+        self.navigationController?.pushViewController(showBooksViewController, animated: true)
     }
 }
 

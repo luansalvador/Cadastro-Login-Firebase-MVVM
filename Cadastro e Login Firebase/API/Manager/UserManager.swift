@@ -2,7 +2,7 @@
 //  UserManager.swift
 //  Cadastro e Login Firebase
 //
-//  Created by sis on 23/05/23.
+//  Created by Luan Henrique Salvador Amorim on 23/05/23.
 //
 
 import Foundation

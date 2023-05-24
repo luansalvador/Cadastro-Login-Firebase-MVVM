@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         let rootViewController = OnboardingViewController()
         let navigationController = UINavigationController()
-        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.prefersLargeTitles = false
         navigationController.viewControllers = [rootViewController]
         navigationController.navigationBar.tintColor = UIColor.primaryColor
         
