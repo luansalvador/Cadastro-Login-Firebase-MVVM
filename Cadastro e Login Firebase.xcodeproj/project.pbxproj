@@ -14,7 +14,7 @@
 		09C2B42E28FBC5D4008DE871 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B42B28FBC5D4008DE871 /* OnboardingViewController.swift */; };
 		09C2B42F28FBC5D4008DE871 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B42C28FBC5D4008DE871 /* OnboardingView.swift */; };
 		09C2B43028FBC5D4008DE871 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B42D28FBC5D4008DE871 /* OnboardingViewModel.swift */; };
-		09C2B43B28FBC614008DE871 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43428FBC614008DE871 /* RegisterUser.swift */; };
+		09C2B43B28FBC614008DE871 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43428FBC614008DE871 /* UserModel.swift */; };
 		09C2B43C28FBC614008DE871 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43528FBC614008DE871 /* RegisterView.swift */; };
 		09C2B43D28FBC614008DE871 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43628FBC614008DE871 /* RegisterViewController.swift */; };
 		09C2B43E28FBC614008DE871 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C2B43728FBC614008DE871 /* RegisterViewModel.swift */; };
@@ -29,6 +29,10 @@
 		0FFC9D11291896BD00DC4F2C /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D10291896BD00DC4F2C /* DefaultButton.swift */; };
 		0FFC9D13291896FE00DC4F2C /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D12291896FE00DC4F2C /* DefaultTextField.swift */; };
 		0FFC9D152919C5BC00DC4F2C /* DefaultLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFC9D142919C5BC00DC4F2C /* DefaultLabel.swift */; };
+		5BCBB01E2A1D6FFA00DDE60F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBB01D2A1D6FFA00DDE60F /* Constants.swift */; };
+		5BCBB0212A1D713000DDE60F /* RegisterUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBB0202A1D713000DDE60F /* RegisterUserProvider.swift */; };
+		5BCBB0262A1D790000DDE60F /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBB0252A1D790000DDE60F /* UserBusiness.swift */; };
+		5BCBB0292A1D828E00DDE60F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCBB0282A1D828E00DDE60F /* UserManager.swift */; };
 		F0338A854EA347A0BCCE687C /* Pods_Cadastro_e_Login_Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212F94F342555297E8835144 /* Pods_Cadastro_e_Login_Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +46,7 @@
 		09C2B42B28FBC5D4008DE871 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		09C2B42C28FBC5D4008DE871 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		09C2B42D28FBC5D4008DE871 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		09C2B43428FBC614008DE871 /* RegisterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		09C2B43428FBC614008DE871 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		09C2B43528FBC614008DE871 /* RegisterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		09C2B43628FBC614008DE871 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		09C2B43728FBC614008DE871 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -58,6 +62,10 @@
 		0FFC9D12291896FE00DC4F2C /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		0FFC9D142919C5BC00DC4F2C /* DefaultLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLabel.swift; sourceTree = "<group>"; };
 		212F94F342555297E8835144 /* Pods_Cadastro_e_Login_Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cadastro_e_Login_Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BCBB01D2A1D6FFA00DDE60F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5BCBB0202A1D713000DDE60F /* RegisterUserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserProvider.swift; sourceTree = "<group>"; };
+		5BCBB0252A1D790000DDE60F /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
+		5BCBB0282A1D828E00DDE60F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A4E18A189629253B6AD2B086 /* Pods-Cadastro e Login Firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cadastro e Login Firebase.debug.xcconfig"; path = "Target Support Files/Pods-Cadastro e Login Firebase/Pods-Cadastro e Login Firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		EA3302F360BDCA43A05F1F23 /* Pods-Cadastro e Login Firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cadastro e Login Firebase.release.xcconfig"; path = "Target Support Files/Pods-Cadastro e Login Firebase/Pods-Cadastro e Login Firebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +105,8 @@
 			children = (
 				09C2B44028FBC973008DE871 /* GoogleService-Info.plist */,
 				09C2B42328FBC53E008DE871 /* Info.plist */,
+				5BCBB0222A1D734200DDE60F /* API */,
+				5BCBB01C2A1D6FDB00DDE60F /* Infrastructure */,
 				09C2B42928FBC552008DE871 /* Resources */,
 				0FFC9D0F291896A900DC4F2C /* Components */,
 				0FFC9D082918954400DC4F2C /* Utils */,
@@ -130,7 +140,6 @@
 		09C2B43128FBC614008DE871 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				09C2B43428FBC614008DE871 /* RegisterUser.swift */,
 				09C2B43528FBC614008DE871 /* RegisterView.swift */,
 				09C2B43628FBC614008DE871 /* RegisterViewController.swift */,
 				09C2B43728FBC614008DE871 /* RegisterViewModel.swift */,
@@ -177,6 +186,57 @@
 				0FFC9D142919C5BC00DC4F2C /* DefaultLabel.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5BCBB01C2A1D6FDB00DDE60F /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				5BCBB01D2A1D6FFA00DDE60F /* Constants.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		5BCBB01F2A1D70D600DDE60F /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				5BCBB0202A1D713000DDE60F /* RegisterUserProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		5BCBB0222A1D734200DDE60F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5BCBB0232A1D740100DDE60F /* Model */,
+				5BCBB01F2A1D70D600DDE60F /* Provider */,
+				5BCBB0242A1D785D00DDE60F /* Business */,
+				5BCBB0272A1D824700DDE60F /* Manager */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5BCBB0232A1D740100DDE60F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09C2B43428FBC614008DE871 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BCBB0242A1D785D00DDE60F /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				5BCBB0252A1D790000DDE60F /* UserBusiness.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		5BCBB0272A1D824700DDE60F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5BCBB0282A1D828E00DDE60F /* UserManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		8CBB09A23C2F2EA924CC8B5A /* Frameworks */ = {
@@ -318,7 +378,8 @@
 				09C2B43F28FBC614008DE871 /* RegisterCell.swift in Sources */,
 				09C2B43028FBC5D4008DE871 /* OnboardingViewModel.swift in Sources */,
 				0F3D824429F2024F001A9B75 /* MainPageViewModel.swift in Sources */,
-				09C2B43B28FBC614008DE871 /* RegisterUser.swift in Sources */,
+				5BCBB0292A1D828E00DDE60F /* UserManager.swift in Sources */,
+				09C2B43B28FBC614008DE871 /* UserModel.swift in Sources */,
 				0FFC9D0A2918956500DC4F2C /* UIColor+.swift in Sources */,
 				0FFC9D152919C5BC00DC4F2C /* DefaultLabel.swift in Sources */,
 				09C2B43E28FBC614008DE871 /* RegisterViewModel.swift in Sources */,
@@ -326,7 +387,10 @@
 				0FFC9D11291896BD00DC4F2C /* DefaultButton.swift in Sources */,
 				09C2B42F28FBC5D4008DE871 /* OnboardingView.swift in Sources */,
 				09C2B42E28FBC5D4008DE871 /* OnboardingViewController.swift in Sources */,
+				5BCBB01E2A1D6FFA00DDE60F /* Constants.swift in Sources */,
+				5BCBB0262A1D790000DDE60F /* UserBusiness.swift in Sources */,
 				09C2B41828FBC53D008DE871 /* SceneDelegate.swift in Sources */,
+				5BCBB0212A1D713000DDE60F /* RegisterUserProvider.swift in Sources */,
 				0F3D824629F203DF001A9B75 /* MainPageView.swift in Sources */,
 				0F3D824229F20201001A9B75 /* MainPageViewController.swift in Sources */,
 				0FFC9D13291896FE00DC4F2C /* DefaultTextField.swift in Sources */,
@@ -469,7 +533,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HXRS3CF57N;
+				DEVELOPMENT_TEAM = 6P4F7LXHFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cadastro e Login Firebase/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -497,7 +561,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HXRS3CF57N;
+				DEVELOPMENT_TEAM = 6P4F7LXHFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cadastro e Login Firebase/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

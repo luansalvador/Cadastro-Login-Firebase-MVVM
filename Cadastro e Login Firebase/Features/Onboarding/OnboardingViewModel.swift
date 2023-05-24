@@ -29,11 +29,15 @@ final class OnboardingViewModel {
     }
     
     public func loginSuccess() {
+        let business = UserBusiness()
+        let manager = UserManager(business: business)
         
-        Auth.auth().signIn(withEmail: emailLogin, password: passwordLogin) { authData, error in
-            if error == nil {
+        manager.login(email: emailLogin, password: passwordLogin) { userModel in
+            switch userModel {
+                
+            case .success(_):
                 self.delegate?.loginOnSucessPush()
-            } else {
+            case .failure(_):
                 print("Falha no login")
             }
         }
